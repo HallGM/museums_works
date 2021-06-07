@@ -1,0 +1,14 @@
+<!-- prettier-ignore -->
+{% extends 'base.html' %} 
+{% block content %}
+
+<h2>Title:</h2>
+<p>{{work.title}}</p>
+<h2>Artist:</h2>
+<p>{{work.artist}}</p>
+<h2>Year:</h2>
+<p>{{work.year}}</p>
+<h2>Museum:</h2>
+<a href="/museums/{{work.museum.id}}">{{work.museum.name}}</a>
+
+{% endblock content %}

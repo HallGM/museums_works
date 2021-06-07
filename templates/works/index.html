@@ -1,0 +1,19 @@
+<!-- prettier-ignore -->
+{% extends "base.html" %}
+{% block content %}
+
+
+{% for work in works %}
+<div>
+  <a href="/works/{{work.id}}">{{work.get_details()}}</a>
+</div>
+<form action="/works/{{work.id}}/edit">
+  <button>Edit</button>
+</form>
+<form action="/works/{{work.id}}/delete" method="POST">
+  <button>Delete</button>
+</form>
+{% endfor %}
+
+<!-- prettier-ignore -->
+{% endblock %}

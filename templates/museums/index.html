@@ -1,0 +1,21 @@
+<!-- prettier-ignore -->
+{% extends "base.html" %}
+{% block content %}
+
+{% for museum in museums %}
+<div>
+  <div>
+    <a href="/museums/{{museum.id}}">{{museum.name}}</a>
+    <address>{{museum.address}}</address>
+  </div>
+  <form action="/museums/{{museum.id}}/edit">
+    <button>Edit</button>
+  </form>
+  <form action="/museums/{{museum.id}}/delete" method="POST">
+    <button>Delete</button>
+  </form>
+</div>
+
+<!-- prettier-ignore -->
+{% endfor %} 
+{% endblock %}

@@ -1,0 +1,34 @@
+<!-- prettier-ignore -->
+{% extends "base.html" %} 
+{% block content %}
+
+<form action="{{post_to}}" method="post">
+  <div>
+    <label for="name">Name:</label>
+    <input
+      value="{{museum.name}}"
+      type="text"
+      id="name"
+      name="name"
+      placeholder="Museum name"
+      required
+      autofocus
+    />
+  </div>
+
+  <div>
+    <label for="address">Address:</label>
+    <input
+      value="{{museum.address}}"
+      type="text"
+      id="address"
+      name="address"
+      placeholder="Address"
+      required
+    />
+  </div>
+
+  <button type="submit">Save</button>
+</form>
+
+{% endblock %}
