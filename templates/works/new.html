@@ -5,22 +5,22 @@
 
   <div>
     <label for="title">Title:</label>
-    <input value="{{work.title}}" type="text" id="title" name="title" placeholder="Title" required autofocus />
+    <input class="form-control" value="{{work.title}}" type="text" id="title" name="title" placeholder="Title" required autofocus />
   </div>
 
   <div>
     <label for="artist">Artist:</label>
-    <input value="{{work.artist}}" type="text" id="artist" name="artist" placeholder="Artist" required />
+    <input class="form-control" value="{{work.artist}}" type="text" id="artist" name="artist" placeholder="Artist" required />
   </div>
 
   <div>
     <label for="year">Year:</label>
-    <input value={{work.year}} type="number" id="year" name="year" placeholder="Year" required />
+    <input class="form-control" value={{work.year}} type="number" id="year" name="year" placeholder="Year" required />
   </div>
 
   <div>
     <label for="museum">Museum:</label>
-    <select id="museum" name="museum_id">
+    <select class="form-control" id="museum" name="museum_id">
       {% for museum in museums %}
       <option 
       {% if museum.id == work.museum.id: %}
@@ -31,7 +31,7 @@
     </select>
   </div>
 
-  <button type="submit">Save</button>
+  <button class="btn btn-block btn-primary"type="submit">Save</button>
 
 </form>
 

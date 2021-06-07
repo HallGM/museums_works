@@ -6,6 +6,7 @@
   <div>
     <label for="name">Name:</label>
     <input
+      class="form-control"
       value="{{museum.name}}"
       type="text"
       id="name"
@@ -19,6 +20,7 @@
   <div>
     <label for="address">Address:</label>
     <input
+      class="form-control"
       value="{{museum.address}}"
       type="text"
       id="address"
@@ -28,7 +30,7 @@
     />
   </div>
 
-  <button type="submit">Save</button>
+  <button class="btn btn-block btn-primary" type="submit">Save</button>
 </form>
 
 {% endblock %}

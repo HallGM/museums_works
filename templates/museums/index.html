@@ -3,17 +3,22 @@
 {% block content %}
 
 {% for museum in museums %}
-<div>
-  <div>
+<hr />
+<div class="row">
+  <div class="col-md-8">
     <a href="/museums/{{museum.id}}">{{museum.name}}</a>
     <address>{{museum.address}}</address>
   </div>
-  <form action="/museums/{{museum.id}}/edit">
-    <button>Edit</button>
-  </form>
-  <form action="/museums/{{museum.id}}/delete" method="POST">
-    <button>Delete</button>
-  </form>
+  <div class="col-md-2">
+    <form action="/museums/{{museum.id}}/edit">
+      <button class="btn btn-default">Edit</button>
+    </form>
+  </div>
+  <div class="col-md-2">
+    <form action="/museums/{{museum.id}}/delete" method="POST">
+      <button class="btn btn-danger">Delete</button>
+    </form>
+  </div>
 </div>
 
 <!-- prettier-ignore -->
